@@ -1,0 +1,142 @@
+<?php
+session_start();
+ include('../../../Controlador/Sessiones/validarSessActiva.php');
+ verificar_session();
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <link rel="icon" type="image/png" href="../../../Vista/Estilo/Images/icono1.png">
+
+
+  <!-- Required meta tags -->  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- Required Estilos y Plugins -->
+
+    
+    <link rel="stylesheet" href="../../../Vista/Estilo/Css/Formularios/Consulta_Disponibilidad.css">
+
+
+      <link rel="stylesheet" href="../../../Vista/Estilo/Css/Formularios/respuesta.css">
+
+
+    <link rel="stylesheet" href="../../../Vista/Estilo/Plugins/Fontawesome/css/fontawesome.css">
+
+    <link rel="stylesheet" href="../../../Vista/Estilo/Plugins/Fontawesome/css/regular.css">
+
+    <link rel="stylesheet" href="../../../Vista/Estilo/Plugins/Fontawesome/css/solid.css">
+
+    <script src="../../../Vista/Estilo/Js/Funciones/Redirecciones_Pestañas.js"></script>
+    <script src="../../../Vista/Estilo/Js/Funciones/Validaciones_Escritura.js"></script>
+
+     <link rel="stylesheet" href="../../../Vista/Plugins/Sweetalert2/sweetalert2.min.css">  
+
+    <script src="../../../Vista/Estilo/Plugins/Jquery/jquery-3.3.1.min.js"></script>
+
+    <script src="../../../Vista/Estilo/Plugins/Sweetalert2/sweetalert2.all.min.js"></script>
+
+
+    <title>Disponibilidad Corta</title>
+
+
+</head>
+    
+    <body id="Ventana" class="Ventana">
+
+
+   
+
+        <form action=""id="Reporte" name="Reporte" method="post" onsubmit="event.preventDefault();onFormSubmit();">
+
+        <div class="form">
+        <div class="cerrar" id="cerrar"><a href="javascript:CerrarVentana()"><img src="../../../Vista/Estilo/Images/logo cierre.png"></a>
+
+            <h1>Disponibilidad</h1>
+            <h2>de Servicio BDV</h2>
+             
+    <div class="Firma">
+    <p> Le informamos Que nuestra PLataforma BDV se Mantiene Operativa </p>
+</div>
+
+
+
+<p> Porcentajes de Aprobacionde los Ultmos 60 Segundos</p> </br> 
+
+<div class="Disponibilidad" id="Disponibilidad">
+
+
+    <div class="Consorcio-Credicard">
+    <h3>Consorcio Credicard</h3>
+
+
+    <p><span>Visa:</span> 100% de 1000 Transacciones</p>  
+        
+    <p><span>Master:</span> 100% de 1000 Transacciones </p>
+
+    <p><span>Maestro:</span> 100% de 1000 Transacciones</p> 
+
+    <p><span>IPG:</span> 100% de 1000 Transacciones </p>
+
+    <p><span>Time Out:</span> 100% de 1000 Transacciones </p>
+        </div>
+
+
+        
+    <div class="Servicios-Operativos">
+    <h3>Servicios Operativos</h3><br>
+
+    <p><span>Banca / Internet:</span>Operativo</p>
+
+    <p><span>Pagina Publica: </span> Operativo</p>
+
+    <p><span>Pago Clave:</span> Operativo</p>
+
+    <p><span>Biopago:</span> Operativo</p>
+
+    <p><span>ATM:</span> Operativo</p>
+
+    <p><span>SW7B Adquiriente:</span>Operativo</p>
+
+    <p><span>SW7B Emisor:</span> Operativo</p>
+
+    <p><span>IST:</span> Operativo</p>
+
+    </div>
+
+
+
+
+
+</div>
+
+
+<br>
+<div class="Firma">
+
+<p> Monitoreo y Gestion de Servicios Tecnologicos </p>
+
+<p> Banco de Venezuela </p>
+
+<p> +58 0212-501-2465 </p>
+</div>
+
+
+ </div> </div> 
+
+    <button type="submit" id="Generar">Generar PDF</button>
+
+
+    
+   
+
+
+ </div></div>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<div class="container-fluid">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3 class="panel-title"><i class="zmdi zmdi-format-list-bulleted"></i> &nbsp; LISTA DE USUARIOS</h3>
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-hover text-center">
+							<thead>
+								<tr>
+									<th class="text-center">#</th>
+									<th class="text-center">IDENTIDAD</th>
+									<th class="text-center">NOMBRES</th>
+									<th class="text-center">APELLIDOS</th>
+									<th class="text-center">TELÉFONO</th>
+									<th class="text-center">CEDULA</th>
+									<th class="text-center">CARGO</th>
+									<th class="text-center">ELIMINAR</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+	<?php
+	
+	if (isset($_REQUEST["usu"])) {
+		# code...
+		 $d=json_decode($_REQUEST["usu"]);
+		foreach ($d as $v ) {
+			 echo "<tr><td>1</td><td>$v->id</td><td>$v->nombre</td><td>$v->apellido</td><td>$v->telefono</td><td>$v->cedula</td><td>$v->perfil</td><td><form action='../../controllers/control.php'method='POST'>
+											<button type='submit' class='btn btn-danger btn-raised btn-xs' name='eliminar'>
+												<i class='zmdi zmdi-delete'></i>
+											</button>
+										</form></td></tr>";
+			 
+		}
+	}
+	?>
+									
+									
+										
+										
+									</td>
+								</tr>
+								
+								
+							</tbody>
+						</table>
+					</div>
+					<nav class="text-center">
+						<ul class="pagination pagination-sm">
+							<li class="disabled"><a href="javascript:void(0)">«</a></li>
+							<li class="active"><a href="javascript:void(0)">1</a></li>
+							<li><a href="javascript:void(0)">2</a></li>
+							<li><a href="javascript:void(0)">3</a></li>
+							<li><a href="javascript:void(0)">4</a></li>
+							<li><a href="javascript:void(0)">5</a></li>
+							<li><a href="javascript:void(0)">»</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		

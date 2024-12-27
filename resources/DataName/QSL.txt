@@ -1,0 +1,159 @@
+
+CREATE TABLE Asistencia_4 (
+                id_Asistencia INTEGER NOT NULL,
+                Descripcion_Asistencia VARCHAR NOT NULL,
+                CONSTRAINT Asistencia_4_pk PRIMARY KEY (id_Asistencia)
+);
+
+
+CREATE TABLE Perfil_3 (
+                Id_perfil INTEGER NOT NULL,
+                Descripcion VARCHAR(13) NOT NULL,
+                CONSTRAINT Miembros_3_pk PRIMARY KEY (Id_perfil)
+);
+
+
+CREATE TABLE Miembros_1 (
+                Cedula INTEGER NOT NULL,
+                Nombre VARCHAR(30) NOT NULL,
+                Apellido VARCHAR(30) NOT NULL,
+                Fecha_nacimiento DATE NOT NULL,
+                Sexo VARCHAR(1) NOT NULL,
+                Telefono VARCHAR(13),
+                Status INTEGER NOT NULL,
+                fecha_activo DATE NOT NULL,
+                CONSTRAINT Miembros_1_pk PRIMARY KEY (Cedula)
+);
+
+
+CREATE TABLE Control_De_diezmo_6 (
+                Id_diezmo INTEGER NOT NULL,
+                Ingresos_Diezmos INTEGER,
+                Cedula INTEGER NOT NULL,
+                CONSTRAINT Control_De_diezmo_6_pk PRIMARY KEY (Id_diezmo)
+);
+
+
+CREATE TABLE Session_10 (
+                id_usuario VARCHAR(20) NOT NULL,
+                Password VARCHAR(50) NOT NULL,
+                Cedula INTEGER NOT NULL,
+                Id_perfil INTEGER NOT NULL,
+                CONSTRAINT Session_10_pk PRIMARY KEY (id_usuario)
+);
+
+
+CREATE TABLE Control_Egresos_7 (
+                Id_Egresos INTEGER NOT NULL,
+                Total_Egresos INTEGER,
+                Monto_Egreso INTEGER,
+                Descripcion_egreso VARCHAR(2000),
+                Fecha_Egreso DATE NOT NULL,
+                id_usuario VARCHAR(20) NOT NULL,
+                CONSTRAINT Control_Egresos_7_pk PRIMARY KEY (Id_Egresos)
+);
+
+
+CREATE TABLE Actividades_9 (
+                id_actividad INTEGER NOT NULL,
+                Nombre_Actividad VARCHAR NOT NULL,
+                Fecha_Actividad DATE NOT NULL,
+                Observaciones_Actividad VARCHAR(5000) NOT NULL,
+                Cedula INTEGER NOT NULL,
+                CONSTRAINT Actividades_9_pk PRIMARY KEY (id_actividad)
+);
+
+
+CREATE TABLE Observacines_miembros_8 (
+                Id_Oservaciones INTEGER NOT NULL,
+                Observaciones VARCHAR(3000),
+                Fecha_observaciones DATE,
+                Cedula INTEGER NOT NULL,
+                CONSTRAINT Observacines_miembros_8_pk PRIMARY KEY (Id_Oservaciones)
+);
+
+
+CREATE TABLE Control_Diario_Asistencia_5 (
+                Cedula INTEGER NOT NULL,
+                id_Asistencia INTEGER
+);
+
+
+CREATE TABLE Ubicacion_2 (
+                Descripcion_calle VARCHAR(200) NOT NULL,
+                Cedula INTEGER NOT NULL
+);
+
+
+ALTER TABLE Control_Diario_Asistencia_5 ADD CONSTRAINT Asistencia_4_Control_Diario_Asistencia_5_fk
+FOREIGN KEY (id_Asistencia)
+REFERENCES Asistencia_4 (id_Asistencia)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE Session_10 ADD CONSTRAINT Perfil_3_Session_10_fk
+FOREIGN KEY (Id_perfil)
+REFERENCES Perfil_3 (Id_perfil)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE Ubicacion_2 ADD CONSTRAINT Miembros_Ubicacion_fk
+FOREIGN KEY (Cedula)
+REFERENCES Miembros_1 (Cedula)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE Control_Diario_Asistencia_5 ADD CONSTRAINT Miembros_1_Control_Diario_Asistencia_5_fk
+FOREIGN KEY (Cedula)
+REFERENCES Miembros_1 (Cedula)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE Observacines_miembros_8 ADD CONSTRAINT Miembros_1_Observacines_miembros_8_fk
+FOREIGN KEY (Cedula)
+REFERENCES Miembros_1 (Cedula)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE Actividades_9 ADD CONSTRAINT Miembros_1_Actividades_9_fk
+FOREIGN KEY (Cedula)
+REFERENCES Miembros_1 (Cedula)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE Session_10 ADD CONSTRAINT Miembros_1_Session_10_fk
+FOREIGN KEY (Cedula)
+REFERENCES Miembros_1 (Cedula)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE Control_De_diezmo_6 ADD CONSTRAINT Miembros_1_Control_De_diezmo_6_fk
+FOREIGN KEY (Cedula)
+REFERENCES Miembros_1 (Cedula)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE Control_Egresos_7 ADD CONSTRAINT Session_10_Control_Egresos_7_fk
+FOREIGN KEY (id_usuario)
+REFERENCES Session_10 (id_usuario)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+INSERT INTO perfil_3 (id_perfil,descripcion)VALUES('1','ADMINISTRADOR');
+INSERT INTO perfil_3 (id_perfil,descripcion)VALUES('2','PASTOR');
+INSERT INTO perfil_3 (id_perfil,descripcion)VALUES('3','SECRETARIA');
+
+INSERT INTO miembros_1 (cedula,nombre,apellido,fecha_nacimiento,sexo,telefono,status,fecha_activo)
+VALUES
+('84286399','Pedro','Torres','1986-1-1','F','04241059171','1','2009-05-09')
+
+insert into ubicacion_2 (descripcion_calle,cedula)
+values('Bajada de Mogollón','84286399')

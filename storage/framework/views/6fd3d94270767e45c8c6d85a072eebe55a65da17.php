@@ -1,0 +1,1 @@
+<?php /**PATH /home/vagrant/code/Laravel_crud/resources/views////layouts/submenu.blade.php ENDPATH**/ ?>

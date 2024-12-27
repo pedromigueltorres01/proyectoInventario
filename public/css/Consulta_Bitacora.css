@@ -1,0 +1,356 @@
+:root{
+   /* --colorTextos: #49454567;*/
+}
+/*
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;*/
+}
+
+
+
+body {
+
+    
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.9;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 5%;
+
+
+
+    
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 800;
+   
+}
+
+h2{
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 800;
+    color: red;
+
+    }
+
+h3{
+    
+   text-align: justify-all;
+    margin: 10px 0;
+    font-weight: 600;
+    color: #000;
+    opacity: 50%;
+    line-height: 1;
+
+    }
+
+    
+
+h4{
+    
+   
+    margin: 10px 0;
+    font-weight: 800;
+    color: #ccc;
+
+
+    }
+
+
+
+    
+    form {
+    background: #fff;
+    height: auto;
+    width: 750px;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    /*display: none; */
+    opacity: 95%;
+ 
+
+}
+
+
+/*.dis {
+    background: #fff;
+    height: auto;
+    width: 45%;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    /*display: none; 
+    opacity: 95%;
+ 
+
+}*/
+
+
+
+.Reporte {
+    background: #fff;
+    height: auto;
+    width: 45%;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    /*display: none; */
+    opacity: 95%;
+ 
+
+}
+
+.Reporte {
+    background: #fff;
+    height: auto;
+    width: 45%;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    /*display: none; */
+    opacity: 95%;
+ 
+
+}
+
+
+.form{
+    width: 90%;
+    margin: auto;
+
+}
+span {
+
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+p{
+   position: relative;
+    line-height: 1.3;
+    background: #fff;
+    width: 100%;
+}
+
+form .Fecha-Inicio-Fin{
+    text-align: center;
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr ;
+    border border-radius: 35px;
+    text-align: justify-all;
+    line-height: 1.3;
+    background: #fff;
+    background: #fff;
+
+
+}
+
+form .Turno{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr  ;
+    border border-radius: 70%;
+    text-align: justify-all;
+    line-height: 1.3;
+    background: #fff;
+
+}
+
+
+form .Scratch-Line{
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr ;
+    border border-radius: 35px;
+    text-align: justify-all;
+    line-height: 1.3;
+    background: #fff;
+
+}
+
+form .Consolas-Line{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    border border-radius: 35px;
+    text-align: justify-all;
+    line-height: 1.3;
+    background: #fff;
+
+}
+
+
+
+.Disponibilidad-Seleccion{
+    display: grid;
+    grid-template-columns:1fr;
+    border border-radius: 35px;
+    background: #fff;
+
+}
+
+.Biracora-Caja{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    border border-radius: 35px;
+    background: #fff;
+
+}
+
+
+.Firma{
+
+
+   text-align: center;
+    margin: 10px 0;
+    font-weight: 600;
+    color: #000;
+    opacity: 50%;
+    line-height: 1;
+}
+
+
+
+
+input, select{
+  
+    background: none;
+    color:#c6c6c6;
+    font-size: 17px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 90%;
+    border:none;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+
+}
+
+textarea{
+  
+    background: none;
+    color:#c6c6c6;
+    font-size: 17px;
+    padding: 20px 20px 20px 20px;
+    display: block;
+    width: 90%;
+    border:none;
+    height: 200px;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+
+}
+
+input:focus,textarea:focus,select:focus{
+    outline: none;
+    color: rgb(94,93,93);
+}
+
+input:focus~label, 
+input:valid~label, 
+textarea:focus~label, textarea:valid~label{
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: red;
+}
+
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top:10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+    
+}
+
+
+input:focus~.barra::before, 
+textarea:focus~.barra::before, 
+select:focus~.barra::before{
+    width:  0%;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 50% 100%;
+}
+.barra::before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, red, blue);
+    transition: 0.5s ease all;
+    left: 0%;
+}
+button{
+    background: red;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, red, blue);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, red, blue);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: block;
+    width: 100px;
+    height: 40px;
+    border:none;
+    color:#fff; 
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+ label {
+    display: block;
+    color: #000;
+}qw
+
+@media screen and (max-width:1100px){
+    form{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:800px){
+    form{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:600px){
+    form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:450px){
+    form{
+        width: 90%;
+    }
+}

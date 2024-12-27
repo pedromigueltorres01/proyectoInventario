@@ -1,0 +1,27 @@
+Nombre
+Apellido
+Cedula
+Fecha de nacimiento
+Fecha en que paso a ser activo
+Sexo
+Perfil
+Telefono
+Direccion
+Dia de asistencia
+Diezmo
+fecha_diezmo
+Ofrendas
+fechas_ofrendas
+Ingresos 
+fecha_ingresos
+Monto_total_ingresos
+Egresos
+fecha_egresos
+Descripcion de egresos
+Observaciones_de_miembros
+Stauts de Miembros
+Actividades_Pendietes
+Fecha_actividades
+Normativa_de_Iglesia
+Acuerdos_Reuniones
+fecha_de_acuerdos_reunion
