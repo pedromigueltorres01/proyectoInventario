@@ -42,6 +42,7 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
+       
         //
        // return view('productos.insert');
         $producto=new ArticuloProducto();
