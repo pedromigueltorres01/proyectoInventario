@@ -26,12 +26,42 @@
             </a>
           </li>
       </ul>
-    </div>
       <div class="container-fluid">
+    </div><div class="card-body">
+                            @if ($errors->any())
+                                @foreach ($errors->all() as $error)
+                                   
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        @if($error==="Ya existe un producto con ese nombre, desea añadir al Stand?")
+                                          
+
+                                           <form class="row g-3" method="" action="" style="width: 40rem; margin:20px  auto;" >
+                                            <div class="alert alert-danger" role="alert"
+                                        style="--bs-alert-padding-x: 1;
+                                --bs-alert-padding-y: 1;">
+                                            {{ $error }}
+                                            <button type="submit"  class="btn btn-info btn-raised btn-sm"><strong><i class="zmdi zmdi-plus"></i></strong>  Añadir a Stand</button>
+                                          </div>
+                                           </form>
+
+                                        @else
+                                         <div class="alert alert-danger" role="alert"
+                                        style="--bs-alert-padding-x: 1;
+                                --bs-alert-padding-y: 1;">
+                                        <strong>{{ $error }}</strong>
+                                      
+                                    </div>
+                                     @endif
+                                @endforeach
+                            @endif
+      
       <div class="panel panel-info">
         <div class="panel-heading">
           <h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; NUEVO USUARIO</h3>
         </div>
+        <div id="lineChart" class="echart">
+                        </div>
+                        
         <div class="panel-body">
     <form class="row g-3" method="post" action="/productos" style="width: 40rem; margin:20px  auto;" >
      <!-- {!! Form::open(['url' => '/productos','method' => 'post']) !!}-->
@@ -76,6 +106,10 @@
     
      @endsection
         
-
+<script type="text/javascript">
+  function ver(){
+    alert('si')
+  }
+</script>
     @section("pie")
     @endsection

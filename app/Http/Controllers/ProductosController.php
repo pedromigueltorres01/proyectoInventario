@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Models\Producto;
 use App\Models\ArticuloProducto;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
 
 
 class ProductosController extends Controller
@@ -42,7 +47,13 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
-       
+       $validatedData = $request->validate([
+    'NombreArticulo' => 'required|unique:articulo_productos,NombreArticulo',
+], [
+    'NombreArticulo.required' => 'El  nombre del producto es obligatorio.',
+    'NombreArticulo.unique' => 'Ya existe un producto con ese nombre, desea añadir al Stand?',
+]);
+
         //
        // return view('productos.insert');
         $producto=new ArticuloProducto();
